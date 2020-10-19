@@ -1,0 +1,27 @@
+.routerContent {
+  display: flex;
+  justify-content: space-between;
+}
+.routerLeft {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.routerRight {
+  width: 50%;
+  background-color: #eee;
+}
+.routerlink {
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  /* background-color: #2b76ba; */
+  text-decoration: none;
+  border: 1px solid #eee;
+  margin-bottom: 5px;
+  color: #000;
+}
+.activeclass {
+  background-color: #2b76ba;
+}

@@ -10,7 +10,6 @@ class CommentList extends Component {
     comments:PropTypes.array.isRequired,
     delComment:PropTypes.func.isRequired
   }
-
   render() {
     const {comments,delComment} = this.props
     return (
