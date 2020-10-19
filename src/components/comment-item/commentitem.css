@@ -1,0 +1,21 @@
+.item {
+  width: 100%;
+  border: 1px solid #eee;
+}
+.itemtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.itemname {
+  font-size: 22px;
+}
+.item button {
+  color: red;
+}
+.itemcontent {
+  margin-left: 15px;
+}
+ul {
+  padding: 0;
+}
