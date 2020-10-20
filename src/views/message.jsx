@@ -20,10 +20,10 @@ class message extends Component {
   checkClick=(id)=>{
     this.props.history.push(`/home/message/msginfo/${id}`)
   }
-  goback=()=>{
+  goback = () => {
     this.props.history.goBack()
   }
-  forword=()=>{
+  forword = () => {
     this.props.history.goForward()
   }
   render() {
