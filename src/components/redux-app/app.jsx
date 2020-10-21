@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { increment, decrement } from '../../redux/actions'
+import { increment, decrement, incrementAsync } from '../../redux/actions'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import './app.css'
@@ -8,6 +8,7 @@ class app extends Component {
     count: PropTypes.number.isRequired,
     increment: PropTypes.func.isRequired,
     decrement: PropTypes.func.isRequired,
+    incrementAsync: PropTypes.func.isRequired,
   }
 
   increment = () => {
@@ -30,9 +31,10 @@ class app extends Component {
 
   incrementSync = () => {
     const num = this.select.value * 1
-    setTimeout(() => {
-      this.props.increment(num)
-    }, 1000)
+    this.props.incrementAsync(num)
+    // setTimeout(() => {
+    //   this.props.increment(num)
+    // }, 1000)
   }
   render() {
     const { count } = this.props
@@ -55,6 +57,10 @@ class app extends Component {
   }
 }
 
-export default connect((state) => ({ count: state }), { increment, decrement })(
-  app
-)
+export default connect(
+  (state) => {
+    console.log(state)
+    return { count: state }
+  },
+  { increment, decrement, incrementAsync }
+)(app)
